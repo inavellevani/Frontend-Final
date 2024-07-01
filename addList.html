@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addList.css">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="addListMain">
+        <div class="form-container">
+            <h1>Create News</h1>
+            <form>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input style="width: 50%;" type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="Politics">Politics</option>
+                        <option value="Exclusive">Exclusive</option>
+                        <option value="Lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+                <div class="editor">
+                    <div class="firstNameDiv">
+                        <label for="editorFirstname">Editor First Name</label>
+                        <input type="text" id="editorFirstname" name="editorFirstname" required>
+                    </div>
+                    <div class="lastNameDiv">
+                        <label for="editorLastname">Editor Last Name</label>
+                        <input type="text" id="editorLastname" name="editorLastname" required>
+                    </div>
+                </div>
+                <div class="form-group" style="justify-content: right; display: flex; gap: 15px; margin-top: 15px;">
+                    <button type="button" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="saveBtn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('cancelBtn').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
